@@ -34,7 +34,7 @@ connection.connect(function (err) {
 // prompts for customer
 var productPurchasePrompt = {
   type: 'input',
-  message: "What is the ID of the product you would like to purchase:",
+  message: "Welcome to Vintage Music Warehouse! Please enter the product ID:",
   name: 'product_purchase'
 };
 var productQuantityPrompt = {
@@ -44,7 +44,7 @@ var productQuantityPrompt = {
 };
 var restartPrompt = {
   type: "list",
-  message: "Would you like to shop again?",
+  message: "Would you like to buy any more epic music today?",
   choices: ["Yes", "No"],
   name: "restart_prompt"
 };
@@ -54,7 +54,13 @@ var displayInventory = function () {
   connection.query("SELECT * FROM products", function (err, res) {
     console.log("DISPLAYING ALL INVENTORY:" + "\n" + "----------------------------");
     for (var i = 0; i < res.length; i++) {
-      console.log("Item ID: " + res[i].item_id + "\n" + "Product Name: " + res[i].product_name + "\n" + "Price: " + res[i].price + "\n" + "Available Quantity: " + res[i].stock_quantity + "\n----------------------------");
+      console.log(
+      "Item ID: " + res[i].item_id + "\n" + 
+      "Product Name: " + res[i].product_name + "\n" + 
+      "Year: " + res[i].release_year + "\n" + 
+      "Department Name: " + res[i].department_name + "\n" + 
+      "Price: " + res[i].price + "\n" + 
+      "Available Quantity: " + res[i].stock_quantity + "\n----------------------------");
     }
     // customer prompt about purchase
     promptCustomer(res);
