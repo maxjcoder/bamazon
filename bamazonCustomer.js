@@ -1,6 +1,6 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
-var Table = require('cli-table');
+var table = require('cli-table');
 var figlet = require('figlet');
 
 figlet('Vintage Music Warehouse!', function(err, data) {
