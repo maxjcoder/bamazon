@@ -1,9 +1,10 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
-var table = require('cli-table');
 var figlet = require('figlet');
+var colors = require("colors");
+var { table } = require("table");
 
-figlet('Vintage Music Warehouse!', function(err, data) {
+figlet('Vintage Music Warehouse', function(err, data) {
   if (err) {
       console.log('Something went wrong...');
       console.dir(err);
