@@ -29,6 +29,11 @@
 ## SEE THE WORKING CODE
 
 ![](Images/ex1.jpg "jpg")
+![](Images/ex2.jpg "jpg")
+![](Images/ex3.jpg "jpg")
+![](Images/ex4.jpg "jpg")
+![](Images/ex5.jpg "jpg")
+![](Images/ex6.jpg "jpg")
 
 
 
