@@ -4,19 +4,25 @@ var figlet = require('figlet');
 var colors = require("colors");
 var { table } = require("table");
 
-figlet('Vintage Music Warehouse', function(err, data) {
+figlet('Vintage Music Warehouse', function (err, data) {
   if (err) {
-      console.log('Something went wrong...');
-      console.dir(err);
-      return;
+    console.log('Something went wrong...');
+    console.dir(err);
+    return;
   }
   console.log(data)
 });
 
 var connection = mysql.createConnection({
   host: "localhost",
+
+  // Your port; if not 3306
   port: "3306",
+
+  // Your username
   user: "root",
+
+  // Your password
   password: "Ginger-Beer-Axe-9",
   database: "bamazon"
 });
@@ -56,12 +62,12 @@ var displayInventory = function () {
     console.log("DISPLAYING ALL INVENTORY:" + "\n" + "----------------------------");
     for (var i = 0; i < res.length; i++) {
       console.log(
-      "Item ID: " + res[i].item_id + "\n" + 
-      "Product Name: " + res[i].product_name + "\n" + 
-      "Year: " + res[i].release_year + "\n" + 
-      "Department Name: " + res[i].department_name + "\n" + 
-      "Price: " + res[i].price + "\n" + 
-      "Available Quantity: " + res[i].stock_quantity + "\n----------------------------");
+        "Item ID: " + res[i].item_id + "\n" +
+        "Product Name: " + res[i].product_name + "\n" +
+        "Year: " + res[i].release_year + "\n" +
+        "Department Name: " + res[i].department_name + "\n" +
+        "Price: " + res[i].price + "\n" +
+        "Available Quantity: " + res[i].stock_quantity + "\n----------------------------");
     }
     // customer prompt about purchase
     promptCustomer(res);
