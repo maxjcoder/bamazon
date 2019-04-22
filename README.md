@@ -26,6 +26,14 @@
 
 -----------------------------------------
 
+## SEE THE WORKING CODE
+
+![](Images/ex1.jpg "jpg")
+
+
+
+-----------------------------------------
+
 ### Built With
 * Node.js
 * JavaScript 
