@@ -36,7 +36,7 @@
 
 ![](Images/ex2.jpg "jpg")
 
-### 3. The [Figlet](https://www.npmjs.com/package/figlet) package renders store name and product database
+### 3. The [Figlet](https://www.npmjs.com/package/figlet) package renders store name and the product database follows
 
 ![](Images/ex3.jpg "jpg")
 
