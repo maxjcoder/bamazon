@@ -9,7 +9,7 @@
 
 -----------------------------------------
 
-## This is a fictitious online store inventory database that allows users to select a product and 'buy' a quantity of that item. The MySQL database get's updated when the user chooses to buy products. 
+## This is a mock online store inventory database. It allows users to select a product and 'buy' a quantity of that item. The MySQL database updates when the user chooses to buy products. 
 
 ## This app utilizes Node.js, MySQL and [Inquirer](https://www.npmjs.com/package/inquirer/).
 
@@ -17,22 +17,39 @@
 
 ## HOW IT WORKS
 
-### Upon running the program, the user will be shown all of the inventory in the database, and will be asked to give the ID of the product they would like to purchase.
+### Upon running the program, the user will be shown all of the inventory in the database, and is asked to give the ID of the product they would like to purchase.
 
-### Once the user gives the ID of the product, they are asked how many units of the product they would like to buy. Once they enter the amount, if the number that they entered is less than or equal to the current inventory number for the selected product, then the inputted number is subtracted from the product's available quantity and the product's new quantity is updated in the MySQL database. The user is shown a message stating that the products have been bought along with the total cost of their transaction. They are then asked whether they would like to shop again 
+### After the user gives the ID of the product, then they are asked how many units of the product they would like to buy. If the number entered is less than or equal to the current inventory number, then the number is subtracted from the available quantity. Next, the new quantity is updated in the MySQL database. The user is ginen a prompt that the product has been bought along with the total amount for the transaction. Lastly, the user is given the option to shop again. 
 
 
-### If the user types in a quantity that is larger than the current available quantity for the product that they have chosen, then an error message pops up, and they are taken back to the starting prompt.
+### If the user types in a quantity that is larger than the currently available quantity for the chosenproduct, an error message renders and they are taken back to begin again.
 
 -----------------------------------------
 
 ## SEE THE WORKING CODE
 
+### 1. Open bamazon store front in terminal
+
 ![](Images/ex1.jpg "jpg")
+
+### 2. Enter 'node bamazonCustomer.js' into command line
+
 ![](Images/ex2.jpg "jpg")
+
+### 3. The [Figlet](https://www.npmjs.com/package/figlet) package renders store name and product database
+
 ![](Images/ex3.jpg "jpg")
+
+### 4. Prompt to enter the: 'product id' & 'quantity'; transaction total & shop again (y/n) option
+
 ![](Images/ex4.jpg "jpg")
+
+### 5. Example of an 'insufficient quantity' entered
+
 ![](Images/ex5.jpg "jpg")
+
+### 6. Example 5, followed by shop again 'no' functionality
+
 ![](Images/ex6.jpg "jpg")
 
 
